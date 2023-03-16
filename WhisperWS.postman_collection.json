@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "a57d98e8-2b27-414f-8dbd-f327bcbfcf10",
+		"name": "WhisperWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Transcribe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"type": "file",
+							"src": "/D:/opt/apps/whisper/data/working-together-guidelines-TMP.wav"
+						},
+						{
+							"key": "request",
+							"value": "{\"model\": \"tiny.en\",\"language\": \"en\",\"outputFormat\": \"txt\"}",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/transcribe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"transcribe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
